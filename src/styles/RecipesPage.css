@@ -1,0 +1,30 @@
+.recipes-page {
+  padding: var(--spacing-xl) 0;
+}
+
+.recipes-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-lg);
+}
+
+@media (min-width: 992px) {
+  .recipes-content {
+    grid-template-columns: 300px 1fr;
+  }
+}
+
+.recipes-results {
+  min-height: 400px;
+}
+
+.loading-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  background-color: var(--bg-color);
+  border-radius: var(--radius-lg);
+  color: var(--text-light);
+  font-size: var(--font-lg);
+}

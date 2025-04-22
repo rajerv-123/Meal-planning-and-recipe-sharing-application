@@ -1,0 +1,122 @@
+.hero {
+  position: relative;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("https://source.unsplash.com/random/1600x900/?food");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: var(--spacing-xxl) 0;
+  margin-bottom: var(--spacing-xxl);
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+.hero h1 {
+  font-size: var(--font-xxxl);
+  font-weight: var(--font-bold);
+  margin-bottom: var(--spacing-md);
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: var(--font-xxl);
+  }
+}
+
+.hero p {
+  font-size: var(--font-lg);
+  margin-bottom: var(--spacing-lg);
+  opacity: 0.9;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-xl);
+}
+
+.hero-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-radius: var(--radius);
+  font-weight: var(--font-medium);
+  font-size: var(--font-md);
+  text-decoration: none;
+  transition: transform var(--transition-fast), background-color var(--transition-fast);
+}
+
+.hero-button svg {
+  margin-right: var(--spacing-sm);
+}
+
+.hero-button.primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.hero-button.primary:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+}
+
+.hero-button.secondary {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  backdrop-filter: blur(5px);
+}
+
+.hero-button.secondary:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.hero-features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-xl);
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.feature-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  font-size: var(--font-lg);
+}
+
+.feature-text {
+  text-align: left;
+}
+
+.feature-text h3 {
+  font-size: var(--font-md);
+  margin-bottom: 0;
+  color: white;
+}
+
+.feature-text p {
+  font-size: var(--font-sm);
+  margin-bottom: 0;
+  opacity: 0.8;
+}

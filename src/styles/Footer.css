@@ -1,0 +1,132 @@
+.footer {
+  background-color: var(--bg-dark);
+  color: white;
+  padding-top: var(--spacing-xl);
+  margin-top: var(--spacing-xxl);
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+@media (min-width: 768px) {
+  .footer-container {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 var(--spacing-lg);
+  }
+}
+
+.footer-logo {
+  margin-bottom: var(--spacing-lg);
+}
+
+@media (min-width: 768px) {
+  .footer-logo {
+    flex: 1;
+    margin-bottom: 0;
+  }
+}
+
+.footer-logo h2 {
+  display: flex;
+  align-items: center;
+  font-size: var(--font-xl);
+  color: white;
+  margin-bottom: var(--spacing-sm);
+}
+
+.logo-icon {
+  margin-right: var(--spacing-sm);
+  color: var(--primary-color);
+}
+
+.footer-logo p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: var(--font-sm);
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xl);
+  margin-bottom: var(--spacing-lg);
+}
+
+@media (min-width: 768px) {
+  .footer-links {
+    flex: 2;
+    justify-content: flex-end;
+    margin-bottom: 0;
+  }
+}
+
+.footer-section h3 {
+  color: white;
+  font-size: var(--font-md);
+  margin-bottom: var(--spacing-md);
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section li {
+  margin-bottom: var(--spacing-sm);
+}
+
+.footer-section a {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.footer-section a:hover {
+  color: var(--primary-color);
+}
+
+.social-links {
+  display: flex;
+  gap: var(--spacing-md);
+}
+
+.social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  color: white;
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.social-links a:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: var(--spacing-md) 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: var(--spacing-lg);
+}
+
+.footer-bottom p {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: var(--font-xs);
+  margin: var(--spacing-xs) 0;
+}
+
+.heart-icon {
+  color: var(--primary-color);
+  margin: 0 var(--spacing-xs);
+}

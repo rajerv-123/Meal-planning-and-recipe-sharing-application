@@ -1,0 +1,286 @@
+.meal-plan-calendar {
+  background-color: var(--bg-color);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  padding: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
+  overflow-x: auto;
+}
+
+.calendar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-lg);
+}
+
+.calendar-header h2 {
+  font-size: var(--font-lg);
+  margin: 0;
+}
+
+.calendar-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background-color: var(--bg-light);
+  border: none;
+  border-radius: 50%;
+  color: var(--text-color);
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+
+.calendar-nav:hover {
+  background-color: var(--border-color);
+}
+
+.calendar-grid {
+  min-width: 700px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.calendar-row {
+  display: flex;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.calendar-row:last-child {
+  border-bottom: none;
+}
+
+.calendar-cell {
+  flex: 1;
+  min-width: 100px;
+  padding: var(--spacing-sm);
+  border-right: 1px solid var(--border-color);
+}
+
+.calendar-cell:last-child {
+  border-right: none;
+}
+
+.header-row {
+  background-color: var(--bg-light);
+  font-weight: var(--font-medium);
+}
+
+.meal-type-header {
+  min-width: 100px;
+  max-width: 100px;
+}
+
+.day-header {
+  text-align: center;
+  padding: var(--spacing-md);
+}
+
+.day-header.today {
+  background-color: rgba(255, 107, 107, 0.1);
+}
+
+.day-name {
+  font-weight: var(--font-medium);
+  margin-bottom: var(--spacing-xs);
+}
+
+.day-date {
+  font-size: var(--font-lg);
+  font-weight: var(--font-bold);
+}
+
+.meal-type-cell {
+  background-color: var(--bg-light);
+  display: flex;
+  align-items: center;
+  min-width: 100px;
+  max-width: 100px;
+}
+
+.meal-type {
+  font-weight: var(--font-medium);
+}
+
+.meal-cell {
+  min-height: 100px;
+  padding: var(--spacing-sm);
+}
+
+.meal-items {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.meal-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  background-color: var(--bg-light);
+  border-radius: var(--radius);
+  font-size: var(--font-sm);
+}
+
+.meal-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 80%;
+}
+
+.remove-meal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  background: none;
+  border: none;
+  color: var(--text-light);
+  cursor: pointer;
+  transition: color var(--transition-fast);
+}
+
+.remove-meal:hover {
+  color: var(--danger-color);
+}
+
+.add-meal-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-xs);
+  width: 100%;
+  padding: var(--spacing-sm);
+  background-color: transparent;
+  border: 1px dashed var(--border-color);
+  border-radius: var(--radius);
+  color: var(--text-light);
+  font-size: var(--font-sm);
+  cursor: pointer;
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.add-meal-button:hover {
+  background-color: var(--bg-light);
+  color: var(--text-color);
+}
+
+.add-meal-button.small {
+  padding: var(--spacing-xs);
+  margin-top: var(--spacing-xs);
+}
+
+.meal-selector-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: var(--z-modal);
+  padding: var(--spacing-md);
+}
+
+.meal-selector {
+  width: 100%;
+  max-width: 600px;
+  max-height: 80vh;
+  background-color: var(--bg-color);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.meal-selector-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-md);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.meal-selector-header h3 {
+  margin: 0;
+  font-size: var(--font-lg);
+}
+
+.close-selector {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: none;
+  border: none;
+  border-radius: 50%;
+  color: var(--text-color);
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+
+.close-selector:hover {
+  background-color: var(--bg-light);
+}
+
+.recipe-selector {
+  padding: var(--spacing-md);
+  overflow-y: auto;
+  max-height: 60vh;
+}
+
+.recipe-selector h4 {
+  margin-top: 0;
+  margin-bottom: var(--spacing-md);
+}
+
+.recipe-options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-md);
+}
+
+@media (max-width: 576px) {
+  .recipe-options {
+    grid-template-columns: 1fr;
+  }
+}
+
+.recipe-option {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm);
+  background-color: var(--bg-light);
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+
+.recipe-option:hover {
+  background-color: var(--border-color);
+}
+
+.recipe-option img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
+
+.recipe-option span {
+  font-size: var(--font-sm);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
