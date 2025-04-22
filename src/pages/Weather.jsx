@@ -1,8 +1,8 @@
-"\"use client"
+"use client"
 
 import { useState, useEffect } from "react"
 import { FaCloud, FaSun, FaSmog } from "react-icons/fa"
-import "../styles/Weather.css"
+// import "../styles/Weather.css"
 
 function Weather() {
   const [weatherData, setWeatherData] = useState(null)
